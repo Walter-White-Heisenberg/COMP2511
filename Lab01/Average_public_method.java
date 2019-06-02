@@ -27,7 +27,7 @@ public class Average {
         public static void main(String[] args) {
             // Add your code
             Average result = new Average();
-            int[] nums = new int[] {1,2,3,4,5};
+            int[] nums = {1,2,3,4,5};
             System.out.println("Average of the numbers is: " + result.computeAverage(nums));
         }
 }
