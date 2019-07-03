@@ -45,8 +45,8 @@ public class Customer {
         Movie movie= new Movie("Gone with the wind");
         movie.setPrice(new NewRelease(movie));
         System.out.println("now the Price type of the movie is " + movie.getPrice());
-        System.out.println("\n AFTER TWO MONTH------------->");
-        movie.after2month();
+        System.out.println("\n BECOMES REGULAR------------>");
+        movie.becomeRegular();
         System.out.println("now the Price type of the movie is " + movie.getPrice());
         Rental r = new Rental(movie, 3);
         c1.addRental(r);
@@ -54,8 +54,8 @@ public class Customer {
         movie = new Movie("Finding Nemo");
         movie.setPrice(new Childrens(movie));
         System.out.println("\n\nnow the Price type of the movie is " + movie.getPrice());
-        System.out.println("\n THIS MOVIE IS AN AWARD-WINNING FILM NOW------------->");
-        movie.getAward();
+        System.out.println("\n TRY TO CHANGE IT TO CHILDREN------------->");
+        movie.becomeChildrens();
         System.out.println("now the Price type of the movie is " + movie.getPrice());
         
         r = new Rental(movie, 7);

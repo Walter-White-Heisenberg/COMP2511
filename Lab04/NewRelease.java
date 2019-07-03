@@ -6,17 +6,28 @@ public class NewRelease implements Price {
 		this.movie = movie;
 	}
 	
-	public void after2month() {
-		movie.setPrice(movie.getRegular());
-		System.out.println("this movie has been published 2 months, its now in Regular Category!");
-	}
-	
-	public void getAward() {
-		movie.setPrice(movie.getClassics());
-		System.out.println("Award Winning Film, it's now Classic!");
-	}
-	
     @Override
+	public Price becomeRegular() {
+		// TODO Auto-generated method stub
+    	System.out.println("This movie becomes a Regular-type movie");
+		return new Regular(movie);
+	}
+
+	@Override
+	public Price becomeClassics() {
+		// TODO Auto-generated method stub
+		System.out.println("This movie becomes a Classic-type movie");
+		return new Classics(movie);
+	}
+
+	@Override
+	public Price becomeChildrens() {
+		// TODO Auto-generated method stub
+		System.out.println("This movie becomes a Childrens-type movie");
+		return new Childrens(movie);
+	}
+
+	@Override
     public double getCharge(int daysRented) {
         return daysRented * 3;
     }

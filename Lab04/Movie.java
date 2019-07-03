@@ -27,34 +27,28 @@ public class Movie {
         Childrens = new Childrens(this);
     }
     
-    public void after2month() {
-    	price.after2month();
+    public void becomeClassic() {
+    	price = price.becomeClassics();
+    }
+
+    public void becomeChildrens() {
+    	price = price.becomeChildrens();
     }
     
-    public void getAward() {
-    	price.getAward();
+    public void becomeRegular() {
+    	price = price.becomeRegular();
     }
+    
     public Price getNewRelease() {
 		return NewRelease;
 	}
 
-	public Price getRegular() {
-		return Regular;
-	}
-
-	public Price getClassics() {
-		return Classics;
-	}
-
-	public Price getChildrens() {
-		return Childrens;
-	}
 
 	public Price getPrice() {
 		return price;
 	}
 
-	public void setPrice(Price price) {
+	protected void setPrice(Price price) {
 		this.price = price;
 	}
 

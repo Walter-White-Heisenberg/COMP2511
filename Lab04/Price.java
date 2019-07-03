@@ -11,8 +11,10 @@ public interface Price {
     	this.price = price;
     }*/
 	
-	public void after2month();
-	public void getAward();
+	// transition method
+	public Price becomeRegular();
+	public Price becomeClassics();
+	public Price becomeChildrens();
 	public double getCharge(int daysRented);
 	
 }
