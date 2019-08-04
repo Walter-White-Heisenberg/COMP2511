@@ -17,7 +17,6 @@ public class Rental {
         return movie;
     }
 
-    // charge is depends on movie type
     public double getCharge() {
         return movie.getCharge(daysRented);
     }

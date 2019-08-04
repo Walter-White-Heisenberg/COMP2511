@@ -1,67 +1,61 @@
 package unsw.movies;
 
 public class Movie {
-    
-	Price NewRelease;
-	Price Regular;
-	Price Classics;
-	Price Childrens;
+    /*public static final int REGULAR = 0;
+    public static final int NEW_RELEASE = 1;
+    public static final int CHILDRENS = 2;*/
 	
-	Price price;
-	// movie is like the context
-	
-	// define one price as we need to use that interface which is the "state"
-	//private Price price;
-	private String title;
-	
-	/*public void setPrice(Price price) {
-		this.price = price;
-	}*/
+	Price regularPrice = new Regular(this);
+	Price newReleasePrice = new NewRelease(this);
+	Price childrensPrice = new Childrens(this);
+	Price classicPrice = new Classic(this);
+
+    private String title;
+    private Price price;
 
     public Movie(String title) {
-    	//this.price = price;
-    	this.title = title;
-        NewRelease = new NewRelease(this);
-        Regular = new Regular(this);
-        Classics = new Classics(this);
-        Childrens = new Childrens(this);
-    }
-    
-    public void becomeClassic() {
-    	price = price.becomeClassics();
+        this.title = title;
+        this.price = newReleasePrice;
     }
 
-    public void becomeChildrens() {
-    	price = price.becomeChildrens();
+    public void setPrice(Price price) {
+        this.price = price;
     }
-    
-    public void becomeRegular() {
-    	price = price.becomeRegular();
+
+    public String getTitle() {
+        return title;
     }
-    
-    public Price getNewRelease() {
-		return NewRelease;
-	}
 
-
-	public Price getPrice() {
-		return price;
-	}
-
-	protected void setPrice(Price price) {
-		this.price = price;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public double getCharge(int daysRented) {
+    public double getCharge(int daysRented) {
         return price.getCharge(daysRented);
     }
 
-};
+	public Price getRegularPrice() {
+		return regularPrice;
+	}
+	public Price getNewReleasePrice() {
+		return newReleasePrice;
+	}
+	public Price getChildrensPrice() {
+		return childrensPrice;
+	}
+	public Price getClassicPrice() {
+		return classicPrice;
+	}
+
+    public void changeToRegular() {
+    	price.changeToRegular();
+    }
+    public void changeToClassic() {
+    	price.changeToClassic();
+    }
+    public void changeToNewRelease() {
+    	price.changeToNewRelease();
+    }
+    public void changeToChildren() {
+    	price.changeToChildren();
+    }
+    
+    
+
+}

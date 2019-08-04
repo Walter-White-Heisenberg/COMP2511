@@ -2,33 +2,37 @@ package unsw.movies;
 
 public class Regular implements Price {
 	Movie movie;
-	public Regular(Movie movie){
+	
+    public Regular(Movie movie) {
 		this.movie = movie;
 	}
-	
-    @Override
-	public Price becomeRegular() {
-		// TODO Auto-generated method stub
-    	System.out.println("This movie is already a Regular-type movie");
-		return this;
+	@Override
+	public void changeToRegular() {
+		
 	}
 
 	@Override
-	public Price becomeClassics() {
-		// TODO Auto-generated method stub
-		System.out.println("This movie becomes a Classic-type movie");
-		return new Classics(movie);
+	public void changeToClassic() {
+		System.out.println("==============change to Classic===============");
+		movie.setPrice(movie.getClassicPrice());
+		
 	}
 
 	@Override
-	public Price becomeChildrens() {
-		// TODO Auto-generated method stub
-		System.out.println("This movie becomes a Childrens-type movie");
-		return new Childrens(movie);
+	public void changeToNewRelease() {
+		System.out.println("==============change to New Release===============");
+		movie.setPrice(movie.getNewReleasePrice());
+		
 	}
 
+	@Override
+	public void changeToChildren() {
+		System.out.println("==============change to Childrens===============");
+		movie.setPrice(movie.getChildrensPrice());
 	
-    @Override
+	}
+
+	@Override
     public double getCharge(int daysRented) {
         double charge = 2;
         if (daysRented > 2)

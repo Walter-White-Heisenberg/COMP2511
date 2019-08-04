@@ -3,8 +3,6 @@ package unsw.movies;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.sun.swing.internal.plaf.metal.resources.metal;
-
 public class Customer {
 
     private String name;
@@ -42,27 +40,18 @@ public class Customer {
 
     public static void main(String[] args) {
         Customer c1 = new Customer("Mary Jane Watson");
-        Movie movie= new Movie("Gone with the wind");
-        movie.setPrice(new NewRelease(movie));
-        System.out.println("now the Price type of the movie is " + movie.getPrice());
-        System.out.println("\n BECOMES REGULAR------------>");
-        movie.becomeRegular();
-        System.out.println("now the Price type of the movie is " + movie.getPrice());
-        Rental r = new Rental(movie, 3);
-        c1.addRental(r);
 
-        movie = new Movie("Finding Nemo");
-        movie.setPrice(new Childrens(movie));
-        System.out.println("\n\nnow the Price type of the movie is " + movie.getPrice());
-        System.out.println("\n TRY TO CHANGE IT TO CHILDREN------------->");
-        movie.becomeChildrens();
-        System.out.println("now the Price type of the movie is " + movie.getPrice());
+        Movie m = new Movie("Gone with the wind");
+        m.changeToRegular();
+        Rental r = new Rental(m, 3);
+        c1.addRental(r);
         
-        r = new Rental(movie, 7);
+        m = new Movie("Finding Nemo");
+        m.changeToChildren();
+        r = new Rental(m, 7);
         c1.addRental(r);
 
         System.out.println(c1.statement());
-
 
     }
 }
