@@ -1,8 +1,8 @@
-**Strategy Design Pattern**
+# **Strategy Design Pattern**
 
-*Algorithms can be selected during the Run-time, using composition*
+##*Algorithms can be selected during the Run-time, using composition*
 
-*(Liskov principle) prefer Composite and Aggregate than Inheritance*
+##*(Liskov principle) prefer Composite and Aggregate than Inheritance*
 
 This is an Movie Renting example:
 1. Movies has three types: Childrens movie / New movie / Old movie
