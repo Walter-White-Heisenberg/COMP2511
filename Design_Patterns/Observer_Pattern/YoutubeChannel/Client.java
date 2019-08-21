@@ -7,7 +7,7 @@ public class Client {
 		Subscriber1 sub1 = new Subscriber1();
 		starChannel.registerSubscriber(sub1);
 		starChannel.newVideoAlarm("New JeffreeStar x Morphe eyeshadow palette is out!");
-
+		starChannel.newVideoAlarm("I WORE MAKEUP FOR 24 HOURS Did My Skin Survive?! ");
 	}
 
 }
