@@ -1,6 +1,6 @@
 # **Strategy Design Pattern**
 
-##*Algorithms can be selected during the Run-time, using composition*
+<br>*Algorithms can be selected during the Run-time, using composition*</br>
 
 ##*(Liskov principle) prefer Composite and Aggregate than Inheritance*
 
